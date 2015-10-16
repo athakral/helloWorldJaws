@@ -1,0 +1,29 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "helloWorldJaws lambdas",
+  "Parameters": {
+    "aaLambdaRoleArn": {
+      "Type": "String",
+      "Default": "arn:aws:iam::994367406372:role/dev-helloWorldJaws-r-IamRoleLambda-1KAIOTP6KRC5M"
+    }
+  },
+  "Resources": {
+    "lGreetingsHello": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "",
+        "Handler": "aws_modules/greetings/hello/handler.handler",
+        "MemorySize": 1024,
+        "Runtime": "nodejs",
+        "Timeout": 6,
+        "Code": {
+          "S3Bucket": "jaws.dev.useast1.myapp-e1ghslfl.com",
+          "S3Key": "JAWS/helloWorldJaws/dev/lambdas/lGreetingsHello@1444966614980.zip"
+        },
+        "Role": {
+          "Ref": "aaLambdaRoleArn"
+        }
+      }
+    }
+  }
+}

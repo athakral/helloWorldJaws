@@ -1,0 +1,19 @@
+{
+  "name": "helloWorldJaws",
+  "version": "0.0.1",
+  "location": "https://github.com/...",
+  "author": "",
+  "description": "",
+  "domain": "myapp-E1GhsLFl.com",
+  "stages": {
+    "dev": [
+      {
+        "region": "us-east-1",
+        "iamRoleArnLambda": "arn:aws:iam::994367406372:role/dev-helloWorldJaws-r-IamRoleLambda-1KAIOTP6KRC5M",
+        "iamRoleArnApiGateway": "arn:aws:iam::994367406372:role/dev-helloWorldJaws-r-IamRoleApiGateway-N2T8LF49X3M7",
+        "jawsBucket": "jaws.dev.useast1.myapp-e1ghslfl.com",
+        "restApiId": "4p5uvg3ra9"
+      }
+    ]
+  }
+}
